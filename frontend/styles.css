@@ -1,0 +1,134 @@
+/* Main styles for the EcoRewards app */
+
+body {
+  background-color: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Upload container styling */
+.upload-container {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-container:hover {
+  border-color: #28a745;
+  background-color: rgba(40, 167, 69, 0.05);
+}
+
+.upload-container.drag-active {
+  border-color: #28a745;
+  background-color: rgba(40, 167, 69, 0.1);
+  transform: scale(1.02);
+}
+
+/* Preview container styling */
+#preview-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+#preview {
+  max-width: 100%;
+  max-height: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#video-preview {
+  max-width: 100%;
+  max-height: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Detection box styling */
+.detection-box {
+  position: absolute;
+  border: 2px solid #28a745;
+  background-color: rgba(40, 167, 69, 0.2);
+  pointer-events: none;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.confidence-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(40, 167, 69, 0.8);
+  color: white;
+  padding: 2px 5px;
+  font-size: 12px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+/* Animation effects */
+.points-animation {
+  animation: fadeInScale 0.8s ease-in-out;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Card styling */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  padding: 15px 20px;
+}
+
+/* Progress bar styling */
+.progress {
+  height: 15px;
+  border-radius: 10px;
+  background-color: #e9ecef;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #007bff;
+  transition: width 1s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 20px;
+  }
+
+  #preview,
+  #video-preview {
+    max-height: 300px;
+  }
+}

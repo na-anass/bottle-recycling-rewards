@@ -1,0 +1,10 @@
+# YOLOv8 dataset configuration
+# This is a template - values will be updated by train.py
+
+path: ./dataset  # Root directory of the dataset
+train: images/train  # Train images (relative to 'path')
+val: images/val  # Validation images (relative to 'path')
+
+# Class names
+names:
+  0: plastic_bottle  # You can add more classes if needed
